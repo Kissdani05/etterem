@@ -1,15 +1,36 @@
-const buttons = document.querySelectorAll(".addtocart");
+const foodDivs = document.querySelectorAll(".etelek");
 var cartVisibility = document.getElementById("rendeles");
-cartVisibility.style.visibility="hidden";
+cartVisibility.style.visibility = "hidden";
 var cart = [];
+var addedIds = [];
 
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-    cartVisibility.style.visibility="visible";
-    cart.push(button.parentElement.querySelectorAll("p"));
-    renderCart();
+
+foodDivs.forEach(foodDiv => {
+  foodDiv.addEventListener("click", (e) => {
+    cartVisibility.style.visibility = "visible";
+      if (addedIds.includes(e.target.id) == true){
+        alert("A termék már hozzá van adva")
+      } else{
+        cart.push(foodDiv.querySelectorAll("p"));
+        renderCart();
+        addedIds.pop();
+        addedIds.push(e.target.id)
+        alert("id")
+      }
+      
+
+      // cart.push(foodDiv.querySelectorAll("p"));
+      // renderCart();
+      // alert(e.target.id)
+      // alert("a termék már hozzá lett adva");
+      
+
+
   })
 })
+
+
+
 
 
 // reload cart's content in kosar div
@@ -25,15 +46,15 @@ function renderCart() {
 
 //clear
 document.getElementById("clearCart").addEventListener("click", () => {
-  if (confirm("Törli a megrendelést?")==true){
+  if (confirm("Törli a megrendelést?") == true) {
     alert("A kosár tartalma eltávolítva")
     cart.splice(0, cart.length);
     renderCart();
-    cartVisibility.style.visibility="hidden";
-  } else{
+    cartVisibility.style.visibility = "hidden";
+  } else {
     alert("A kosár tartalma nem lett eltávolítva")
   }
-  
+
 })
 
 //submit
@@ -41,5 +62,6 @@ document.getElementById("submitCartItems").addEventListener("click", () => {
   alert("Sikeres megrendelés");
   cart.splice(0, cart.length);
   renderCart();
-  cartVisibility.style.visibility="hidden";
+  cartVisibility.style.visibility = "hidden";
+  
 })
