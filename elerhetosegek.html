@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <title>Elérhetőség</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-      *{
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -27,7 +28,7 @@ body{
 }
 .heading{
     color: white;
-    margin-bottom: 30px;
+    margin-bottom: 30;
     padding: 0 0;
     grid-column: 1/-1;
     text-align: center;
@@ -65,13 +66,14 @@ body{
     background-color: #45a049;
   }
   
-  .container {
+  .wrapper {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 10px;
     width: 1000px;
     position: relative;
-    margin-left: 390px;
+    margin-left: 100%;
+
   }
 
 
@@ -84,7 +86,7 @@ body{
 
   }
   
-  .row:after {
+  .rows:after {
     content: "";
     display: table;
     clear: both;
@@ -96,13 +98,152 @@ body{
       margin-top: 0;
     }
   }
+
+  /* --------------------- */
+  .site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+
+
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+
+
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.instagram:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
     </style>
 </head>
 <body>
     <div class="menu">
         <div class="heading">
             <nav>
-                <div class="logo"><a href="alap.html">Jó Étterem</a>
+              <div class="logo"><a href="alap.html"><img src="images/Untitled.png" alt=""></a>
                 </div>
                 <ul>
                     <li><a href="alap.html">Főoldal</a></li>
@@ -114,34 +255,66 @@ body{
             <h1>JÓ ÉTTEREM</h1>
             <h3>&mdash; MENÜ &mdash;</h3>
         </div>
-    <div class="container">
+    <div class="wrapper">
         <div style="text-align:center">
-          <h2>Contact Us</h2>
-          <p>Swing by for a cup of coffee, or leave us a message:</p>
+          <h2>Lépj velünk kapcsolatba!</h2>
+          <p>Írd le a gondolatodat:</p>
         </div>
-        <div class="row">
+        <div class="rows">
           <div class="column">
             <iframe  style="width: 100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2694.1651374050507!2d21.614781715869505!3d47.5256479015594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47470e126f604401%3A0x8f271fee14d8556c!2sDSZC%20Mechwart%20Andr%C3%A1s%20G%C3%A9pipari%20%C3%A9s%20Informatikai%20Technikum!5e0!3m2!1shu!2shu!4v1666782184561!5m2!1shu!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="column">
             <form action="/action_page.php">
-              <label for="fname">First Name</label>
-              <input type="text" id="fname" name="firstname" placeholder="Your name..">
-              <label for="lname">Last Name</label>
-              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              <label for="fname">Családnév</label>
+              <input type="text" id="fname" name="firstname" placeholder="A családneved..">
+              <label for="lname">Keresztnév</label>
+              <input type="text" id="lname" name="lastname" placeholder="A keresztneved..">
               <label for="country">Country</label>
               <select id="country" name="country">
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
+                <option value="ausztralia">Ausztrália</option>
+                <option value="kanada">Kanada</option>
                 <option value="usa">USA</option>
+                <option value="mo">Magyarország</option>
+                <option value="lgy">Lenygyelország</option>
               </select>
-              <label for="subject">Subject</label>
-              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-              <input type="submit" value="Submit">
+              <label for="megjegyz">Megjegyzés</label>
+              <textarea id="megjegyz" name="megjegyz" placeholder="Írj valamit.." style="height:170px"></textarea>
+              <input type="submit" value="Küldés">
             </form>
           </div>
         </div>
       </div>
-      
+  </div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <h6>Az étteremről</h6>
+        <p class="text-justify">A jó étterem, egy étterem azzal a céllal készítve, hogy megkíméljük a gondolkodástól a vásárlóinkat. Jó éttermet keresel, mégcsak megse kell nézned kínálatunkat, hisz nevünk elmond mindent! Természetesen minden étterem neve teljes mértékben igaz. <span style="font-size: 7px;">Nem vállalunk felelősséget esetleges ételmérgezésért. A nálunk való rendelésével elfogadja a kockázatot és semmilyen legális következményei nem lehetnek.</span></p>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
+     <a href="#">Jó Étterem</a>.
+        </p>
+      </div>
+
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <ul class="social-icons">
+          <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+          <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
