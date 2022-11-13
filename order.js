@@ -1,11 +1,11 @@
-const buttons = document.querySelectorAll(".addtocart")
+const buttons = document.querySelectorAll(".addtocart");
 var cartVisibility = document.getElementById("rendeles");
-cartVisibility.style.visibility="hidden"
+cartVisibility.style.visibility="hidden";
 var cart = [];
 
 buttons.forEach(button => {
   button.addEventListener("click", () => {
-    cartVisibility.style.visibility="visible"
+    cartVisibility.style.visibility="visible";
     cart.push(button.parentElement.querySelectorAll("p"));
     renderCart();
   })
@@ -25,12 +25,21 @@ function renderCart() {
 
 //clear
 document.getElementById("clearCart").addEventListener("click", () => {
-  cart.splice(0, cart.length);
-  renderCart();
+  if (confirm("Törli a megrendelést?")==true){
+    alert("A kosár tartalma eltávolítva")
+    cart.splice(0, cart.length);
+    renderCart();
+    cartVisibility.style.visibility="hidden";
+  } else{
+    alert("A kosár tartalma nem lett eltávolítva")
+  }
+  
 })
 
+//submit
 document.getElementById("submitCartItems").addEventListener("click", () => {
   alert("Sikeres megrendelés");
   cart.splice(0, cart.length);
   renderCart();
+  cartVisibility.style.visibility="hidden";
 })
