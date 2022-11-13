@@ -1,0 +1,215 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: white;
+    background-image: url('images/hatter.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+.menu{
+    padding: 0 10px 30px 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    grid-gap: 20px 40px;
+    height: 100%;
+}
+.heading{
+    color: white;
+    margin-bottom: 30px;
+    padding: 0 0;
+    grid-column: 1/-1;
+    text-align: center;
+}
+nav{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo a{
+    font-size: 30px;
+    color: red;
+    font-weight: bold;
+    margin-left: 100px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    transition: 0.5s all ease;
+}
+ul{
+    margin: 0px;
+}
+ul li{
+    float: left;
+    padding: 0px 10px;
+    list-style: none;
+}
+ul li a:hover{
+    color: red;
+}
+.heading>h1{
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+}
+.heading>h3{
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 5px;
+}
+
+.tabla>div{
+    border: 1px solid black;
+    background-color: #D7C1BB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+
+}
+.tabla>div>div{
+    border: 1px solid black;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    background-color: #A59B91;
+
+}
+
+.tabla{
+    height: 600px;
+    width: 1000px;
+    border: 1px solid black;
+    display: grid;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+
+#label-1{
+    position: relative;
+    grid-row: 1;
+    grid-column: 1;
+    background-color: #D7C1BB;
+}
+
+#label-2{
+    position: relative;
+    grid-row: 2;
+    grid-column: 1;
+    background-color: #D7C1BB;
+}
+
+#label-3{
+    position: relative;
+    grid-row: 3;
+    grid-column: 1;
+    background-color: #D7C1BB;
+}
+
+.levesek{
+    position: relative;
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.foetelek{
+    position: relative;
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.desszertek{
+    position: relative;
+    grid-row: 3;
+    grid-column: 2;
+}
+
+[class|=leves], [class|=foetel], [class|=desszert]{
+    height: 90%;
+    width: 180px;
+    border-radius: 15px;
+    margin: 10px;
+    position: relative;
+}
+
+
+/* 
+[class|=foetel]{
+    height: 80%;
+    width: 160px;
+    border-radius: 15px;
+    margin: 10px;
+    position: relative;
+}
+
+[class|=desszert]{
+    height: 80%;
+    width: 160px;
+    border-radius: 15px;
+    margin: 10px;
+    position: relative;
+} */
+
+.nev{
+    position: absolute;
+    top: 5px;
+}
+
+.kep{
+    width: 80%;
+    height: 60%;
+
+}
+
+.ar{
+    position: absolute;
+    bottom: 15px;
+}
+#rendeles{
+    position: absolute;
+    top: 295px;
+    left: 1500px;
+    width: 300px;
+    height: 600px;
+    background-color: white;
+    border-radius: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+#rendelesGombok{
+    margin-left:auto;
+    display:flex;
+    justify-content:flex-end;
+}
+.addtocart{
+    position: absolute;
+    bottom: 0px;
+    font-weight: bold;
+    background-color: burlywood;
+}
+.addtocart:hover{
+    background-color: green;
+}
+
+#rendelesTabla{
+    /* border: 2px solid black; */
+    height: 50%;
+    width: 100%;
+}
+#felvettTermekek{
+    margin-right:0;
+    margin-left:auto;
+    float: right;
+}
