@@ -3,17 +3,18 @@ var cartVisibility = document.getElementById("rendeles");
 cartVisibility.style.visibility = "hidden";
 
 let leves = null
-let levesId =  null
+let levesId = null
 
 let foetel = null
 let foetelId = null
 
 let desszert = null
-let desszertId =  null
+let desszertId = null
 
 function SetDefaultBackground(id) {
   if (id != null) {
     document.getElementById(id).style.backgroundColor = "#A59B91";
+    
   }
 }
 
@@ -25,6 +26,7 @@ foodDivs.forEach(foodDiv => {
         if (foodDiv.id == levesId) {
           alert("A termék már hozzá van adva")
         } else {
+          document.getElementById("label-1").style.backgroundColor = "lightblue";
           SetDefaultBackground(levesId);
           leves = foodDiv;
           levesId = foodDiv.id;
@@ -34,6 +36,7 @@ foodDivs.forEach(foodDiv => {
         if (foodDiv.id == foetelId) {
           alert("A termék már hozzá van adva")
         } else {
+          document.getElementById("label-2").style.backgroundColor = "lightblue";
           SetDefaultBackground(foetelId);
           foetel = foodDiv;
           foetelId = foodDiv.id;
@@ -42,7 +45,8 @@ foodDivs.forEach(foodDiv => {
       case "desszert":
         if (foodDiv.id == desszertId) {
           alert("A termék már hozzá van adva")
-        }else {
+        } else {
+          document.getElementById("label-3").style.backgroundColor = "lightblue";
           SetDefaultBackground(desszertId);
           desszert = foodDiv;
           desszertId = foodDiv.id;
@@ -69,12 +73,28 @@ function renderCart() {
 }
 
 
+function ClearAll(){
+  document.getElementById("kosar").innerHTML = "";
+    SetDefaultBackground(levesId);
+    levesId = null
+    SetDefaultBackground(foetelId);
+    foetelId = null
+    SetDefaultBackground(desszertId);
+    desszertId = null
+    cartVisibility.style.visibility = "hidden";
+    document.getElementById("label-1").style.backgroundColor = "#A59B91";
+    document.getElementById("label-2").style.backgroundColor = "#A59B91";
+    document.getElementById("label-3").style.backgroundColor = "#A59B91";
+  }
+
+
 //clear
 document.getElementById("clearCart").addEventListener("click", () => {
   if (confirm("Törli a megrendelést?") == true) {
     alert("A kosár tartalma eltávolítva")
-    cart.splice(0, cart.length);
+    kosar.innerHTML = " ";
     renderCart();
+    ClearAll();
   } else {
     alert("A kosár tartalma nem lett eltávolítva")
   }
@@ -84,8 +104,7 @@ document.getElementById("clearCart").addEventListener("click", () => {
 //submit
 document.getElementById("submitCartItems").addEventListener("click", () => {
   alert("Sikeres megrendelés");
-  cart.splice(0, cart.length);
+  kosar.innerHTML = " ";
   renderCart();
-  cartVisibility.style.visibility = "hidden";
-
+  ClearAll();d
 })
