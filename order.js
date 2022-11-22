@@ -24,7 +24,10 @@ foodDivs.forEach(foodDiv => {
     switch (foodDiv.title) {
       case "leves":
         if (foodDiv.id == levesId) {
-          alert("A termék már hozzá van adva")
+          SetDefaultBackground(levesId)
+          leves = null
+          levesId = null
+          document.getElementById("label-1").style.backgroundColor = "#A59B91";
         } else {
           document.getElementById("label-1").style.backgroundColor = "lightblue";
           SetDefaultBackground(levesId);
@@ -34,7 +37,10 @@ foodDivs.forEach(foodDiv => {
         break;
       case "foetel":
         if (foodDiv.id == foetelId) {
-          alert("A termék már hozzá van adva")
+          SetDefaultBackground(foetelId)
+          foetel = null
+          foetelId = null
+          document.getElementById("label-2").style.backgroundColor = "#A59B91";
         } else {
           document.getElementById("label-2").style.backgroundColor = "lightblue";
           SetDefaultBackground(foetelId);
@@ -44,7 +50,10 @@ foodDivs.forEach(foodDiv => {
         break;
       case "desszert":
         if (foodDiv.id == desszertId) {
-          alert("A termék már hozzá van adva")
+          SetDefaultBackground(desszertId)
+          desszert = null
+          desszertId = null
+          document.getElementById("label-3").style.backgroundColor = "#A59B91";
         } else {
           document.getElementById("label-3").style.backgroundColor = "lightblue";
           SetDefaultBackground(desszertId);
@@ -56,6 +65,31 @@ foodDivs.forEach(foodDiv => {
     renderCart();
   })
 })
+
+
+
+//deselect the given item
+// function deselectCartItem(itemId){
+//   SetDefaultBackground(itemId);
+//   if(itemId.parent.title =="leves"){
+//     alert("fasufhaső")
+//   }
+
+
+    // case "leves":
+    //   levesId = null
+    //   leves = null
+    //   document.getElementById("label-1").style.backgroundColor = "#A59B91";
+    //   case "foetel":
+    //     foetelId = null
+    //     foetel = null
+    //     document.getElementById("label-2").style.backgroundColor = "#A59B91";
+    //     case "desszert":
+    //       desszertId = null
+    //       desszert = null
+    //       document.getElementById("label-3").style.backgroundColor = "#A59B91";
+    //     }
+    //   }
 
 function renderCart() {
   const kosar = document.getElementById("kosar");
@@ -72,9 +106,9 @@ function renderCart() {
   }
 }
 
-
-function ClearAll(){
-  document.getElementById("kosar").innerHTML = "";
+//clear all the items in the cart
+function clearAll(){
+    document.getElementById("kosar").innerHTML = "";
     SetDefaultBackground(levesId);
     levesId = null
     SetDefaultBackground(foetelId);
@@ -94,7 +128,7 @@ document.getElementById("clearCart").addEventListener("click", () => {
     alert("A kosár tartalma eltávolítva")
     kosar.innerHTML = " ";
     renderCart();
-    ClearAll();
+    clearAll();
   } else {
     alert("A kosár tartalma nem lett eltávolítva")
   }
@@ -106,5 +140,5 @@ document.getElementById("submitCartItems").addEventListener("click", () => {
   alert("Sikeres megrendelés");
   kosar.innerHTML = " ";
   renderCart();
-  ClearAll();d
+  clearAll();d
 })
